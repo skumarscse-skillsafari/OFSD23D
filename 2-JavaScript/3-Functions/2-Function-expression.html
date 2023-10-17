@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Function Expression" />
+    <title>Function Expression</title>
+  </head>
+  <body>
+    <h2>Function Expression</h2>
+
+    <script>
+      // Function Expression
+
+      // Function Declaration
+      //   function displayUserName(name) {
+      //     console.log(name);
+      //   }
+      //   displayUserName("John");
+      //   let firstName = "John";
+
+      /*
+      Syntax
+      let varName = function (para-1, para-2,..., para-N) {
+        // function body
+      }
+      varName(arg-1, arg-2,..., arg-N)
+      */
+
+      //   let displayUserName = function (name) {
+      //     console.log(name);
+      //   };
+      //   displayUserName("John");
+      //   console.log(add(3, 4));
+      //   let firstName = "Jack";
+      //   let name = firstName; // "Jack
+      //   console.log(firstName);
+      //   console.log(name);
+
+      //   let cloneFunction = displayUserName;
+      //   cloneFunction("Robert");
+      //   displayUserName("Robert");
+
+      //   console.log(cloneFunction);
+      //   console.log(displayUserName);
+
+      // Function Declaration Vs. Function Expression
+      //   function add(a, b) {
+      //     return a + b;
+      //   }
+      // console.log(add(3, 4));
+      //   console.log(add(4, 13));
+      //   console.log(add(3, 4));
+      //   let add = function (a, b) {
+      //     return a + b;
+      //   };
+      //   console.log(add(3, 4));
+      //   console.log(add(10, 34));
+
+      // callback function
+      // Passing another function as arugument
+
+      function userDetails(name, age, city) {
+        // name = "John"
+        // age =  function () { console.log("Age: " + 23); };
+        // city = function () { console.log("City: Chennai"); };
+        console.log("Name: " + name);
+        age();
+        city();
+      }
+
+      let userAge = function () {
+        console.log("Age: " + 23);
+      };
+
+      let userCity = function () {
+        console.log("City: Chennai");
+      };
+
+      userDetails("John", userAge, userCity);
+    </script>
+  </body>
+</html>

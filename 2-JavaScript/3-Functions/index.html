@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Functions - Intro" />
+    <title>Functions - Intro</title>
+  </head>
+  <body>
+    <h2>Functions - Intro</h2>
+
+    <script>
+      // displayUserDetails("Robert", 20, "Delhi");
+      // Functions - Intro
+      // Building block of an application. Used to execute the similar tasks without repetation
+
+      //   console.log("Name: John");
+      //   console.log("Age: 30");
+      //   console.log("City: Chennai");
+
+      // Syntax
+      /*
+        // Function Declaration
+        // parameter => optional
+        function functionName (parameter-1, parameter-2,..., parameter-N) {
+            // Function block or Function body
+        }
+
+        // Function calling
+        // functionName(argument-1, argument-2,..., argument-N)
+      */
+
+      // displayUserDetails => camel-case notation
+      // Function declaration
+      //   function displayUserDetails() {
+      //     console.log("Name: John");
+      //     console.log("Age: 30");
+      //     console.log("City: Chennai");
+      //   }
+      //   // Function calling
+      //   displayUserDetails();
+      //   console.log("Hello");
+      //   displayUserDetails();
+
+      // John, 30, Chennai
+      // Jack, 27, Bangalore
+      // Mary, 25, Mumbai
+      // Robert, 20, Delhi
+
+      // Parameter and Argument
+      //   function displayUserDetails(name, age, city) {
+      //     // let name = "John", let age = 30, let city = "Chennai"
+      //     console.log(`Name: ${name}`);
+      //     console.log(`Age: ${age}`);
+      //     console.log(`City: ${city}`);
+      //     console.log("---------------");
+      //   }
+      //   displayUserDetails("John", 30, "Chennai");
+      //   displayUserDetails("Jack", 27, "Bangalore");
+      //   displayUserDetails("Mary", 25, "Mumbai");
+
+      // Local variables and Outer variables
+
+      // Local variable => Visible only inside the block, Can't access outside the block
+      //   function displayName(firstName) {
+      //     // let firstName = "John";
+      //     let lastName = "Jack"; // Local variable
+      //     lastName = "Robert";
+      //     console.log(`FullName: ${firstName}, ${lastName}`);
+      //   }
+      //   displayName("John");
+      //   // console.log(lastName);
+
+      // Outer variable => Can be accessed inside and outside the block. Can also be modified inside the block
+      //   let firstName = "John";
+      //   function displayName(name) {
+      //     let firstName = "Mary";
+      //     console.log(`FullName: ${firstName}, ${name}`);
+      //   }
+      //   displayName("Jack");
+      //   console.log(firstName);
+
+      // return
+      // return keyword must be used at the end of the block
+      // Should use only one return keyword in the block
+
+      //       function displayUserDetails(firstName, lastName, age, city) {
+      //         // console.log(`User FullName: ${firstName}, ${lastName}`);
+      //         // console.log(`User Age: ${age}`);
+      //         // console.log(`User City: ${city}`);
+      //         let userDetails = `
+      // User FullName: ${firstName}, ${lastName}
+      // User Age: ${age}
+      // User City: ${city}`;
+      //         // console.log(userDetails);
+      //         return userDetails;
+      //       }
+
+      //       //   console.log(displayUserDetails("John", "Jack", 23, "Chennai")); // userDetails
+      //       let userInfo = displayUserDetails("John", "Jack", 23, "Chennai");
+      //       console.log(userInfo);
+
+      //   let result = (2 * (4 + 3)) / 10;
+      //   console.log(result);
+
+      //   function displaySum(a, b) {
+      //     // return 23;
+      //     let sum = a + b;
+      //     return sum;
+      //   }
+      //   console.log(displaySum(2, 3));
+
+      // oddOrEven(2) => The entered number is 2 and it is EVEN
+      // oddOrEven(3) => The entered number is 3 and it is ODD
+
+      // function oddOrEven(num) {
+      //   if (num % 2 === 0) {
+      //     return `The entered number: ${num} and it is EVEN`;
+      //   } else {
+      //     return `The entered number: ${num} and it is ODD`;
+      //   }
+      // }
+      // let userInput = prompt("Enter a number", 1);
+      // console.log(oddOrEven(userInput));
+
+      // Default values
+      function displayUserName(name = "Guest") {
+        // name = "Guest"
+        console.log(`Hello, ${name}`);
+      }
+      displayUserName("John");
+    </script>
+  </body>
+</html>
