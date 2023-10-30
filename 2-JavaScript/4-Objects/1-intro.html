@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Objects" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <h2>Objects</h2>
+
+    <script>
+      // Objects
+      // Non - primitives
+      // Values are stored as
+      // key: value pair
+      // key => propertyName
+      // value => propertyValue
+      // propertyName: propertyValue => property
+
+      // Syntax
+      /*
+       let objectName = {
+         key-1: value-1,
+         key-2: value-2
+            :
+            :
+        key-N: value-N
+       }
+      // {...} => Object literal
+      */
+      // UserDetails => name, age, city, isAdmin
+      //   let name = "John";
+      //   let age = 23;
+      //   let city = "Chennai";
+      //   let isAdmin = true;
+      //   console.log(name, age, city, isAdmin);
+
+      //   let userDetails = {
+      //     name: "John",
+      //     age: 23,
+      //     city: "Chennai",
+      //     isAdmin: true,
+      //   };
+      //   console.log(userDetails);
+
+      // Accessing object properties - Using "." operator
+      // Syntax
+      // objectName.propertyName
+      //   console.log(`City: ${userDetails.city}`);
+      //   console.log(`Name: ${userDetails.name}`);
+      //   console.log(`Age: ${userDetails.age}`);
+      //   console.log(`isAdmin: ${userDetails.isAdmin}`);
+
+      // Modifying object property
+      // Syntax
+      // objectName.propertyName = newValue
+      //   userDetails.age = 30;
+      //   console.log(userDetails);
+
+      // Deleting object property
+      // Syntax
+      // delete objectName.properyName
+      //   delete userDetails.city;
+      //   console.log(userDetails);
+
+      // Adding new property
+      // Syntax
+      // objectName.newPropertyName = newValue
+      // Nested properties => property inside a property
+      // JSON => JavaScript Object Notation
+      //   userDetails.address = {
+      //     doorNo: 23,
+      //     street: "CIT",
+      //     state: "Tamilnadu",
+      //   };
+
+      //   console.log(userDetails);
+      //   console.log(userDetails.address.state);
+
+      // Multi-word property names => "Square bracket" => ["propertName"]
+      //   let newUser = {
+      //     "first name": "John",
+      //     "last name": "Jack",
+      //     "date of birth": "30-10-2023",
+      //   };
+      //   console.log(newUser);
+      //   console.log(newUser["first name"]);
+      //   console.log(userDetails["age"]);
+
+      //   let firstName = prompt("What is user last name"); // "last name"
+      //   console.log(newUser[firstName]);
+
+      // Check property existence => "in" operator
+      // Syntax
+      // "propertName" in objectName
+      //   console.log("age" in userDetails);
+      //   console.log("state" in userDetails);
+
+      // Accessing objectProperties using for...in loop
+      // Syntax
+      /*
+      for(let varName in objectName) {
+        objectName[varName]
+      }
+      */
+
+      //   for (let prop in userDetails) {
+      //     console.log(`Key: ${prop} => Value: ${userDetails[prop]}`);
+      //   }
+
+      // Objects and function
+      function userDetails(name, age, city, isAdmin) {
+        // let user = {
+        //   newName: name,
+        //   newAge: age,
+        //   newCity: city,
+        //   newIsAdmin: isAdmin,
+        // };
+        // return user;
+        // return {
+        //   name: name,
+        //   age: age,
+        //   city: city,
+        //   isAdmin: isAdmin,
+        // };
+        // Object short-hand property => keyName: value => key
+        return {
+          name,
+          age,
+          newCity: city,
+          isAdmin,
+        };
+      }
+      console.log(userDetails("Jack", 24, "Chennai", false));
+    </script>
+  </body>
+</html>
