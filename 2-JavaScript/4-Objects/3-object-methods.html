@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Object Methods" />
+    <title>Object Methods</title>
+  </head>
+  <body>
+    <h2>Object Methods</h2>
+
+    <script>
+      // Object Methods
+      let user = {
+        name: "John",
+        age: 23,
+      };
+      //   console.log(user);
+      let displayMessage = function () {
+        console.log("Hello");
+      };
+
+      // Add
+      // objectName.propName = propertyValue
+      user.displayFun = displayMessage;
+
+      console.log(user);
+
+      //   let newUser = {
+      //     name: "Jack",
+      //     displayName: function () {
+      //       console.log("Hello");
+      //     },
+      //   };
+
+      //   console.log(newUser);
+
+      // "this" keyword
+      //   let newUser = {
+      //     name: "Jack",
+      //     displayName: function () {
+      //       //   console.log("Hello", newUser.name);
+      //       console.log("Hello", this.name);
+      //     },
+      //   };
+
+      //   // Accessing object method
+      //   console.log(newUser.name);
+      //   newUser.displayName();
+
+      let userOne = {
+        name: "John",
+      };
+
+      let userTwo = {
+        name: "Jack",
+      };
+
+      let displayFun = function () {
+        console.log("Hello, ", this.name);
+      };
+
+      userOne.displayMessage = displayFun;
+      userTwo.displayMessage = displayFun;
+      console.log(userOne);
+      console.log(userTwo);
+      userOne.displayMessage();
+      userTwo.displayMessage();
+
+      let userDetails = {
+        firstName: "John",
+        lastName: "Jack",
+        age: 23,
+        displayDetails: function () {
+          console.log(
+            `The person with fullname: ${this.firstName}, ${this.lastName} is ${this.age} years old`
+          );
+        },
+      };
+
+      userDetails.displayDetails();
+    </script>
+  </body>
+</html>

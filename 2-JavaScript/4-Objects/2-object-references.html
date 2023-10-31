@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Object - References" />
+    <title>Object - References</title>
+  </head>
+  <body>
+    <h2>Object References</h2>
+
+    <script>
+      // Object References
+      // Primitive datatypes
+      // Copy by value
+      //   let firstName = "John";
+      //   let copyName = firstName;
+      //   //   console.log(firstName);
+      //   //   console.log(copyName);
+      //   firstName = "Jack";
+      //   console.log(firstName); // Jack
+      //   console.log(copyName); // John
+
+      //   let userDetails = {
+      //     name: "John",
+      //     age: 20,
+      //     city: "Chennai",
+      //   };
+      //   let cloneUser = userDetails;
+      //   //   console.log(userDetails);
+      //   //   console.log(cloneUser);
+
+      //   userDetails.state = "Tamilnadu";
+      //   userDetails.age = 26;
+
+      //   console.log(userDetails);
+      //   console.log(cloneUser);
+
+      // Object.assign()
+      // Copy, merge
+      // Syntax
+      // Copy
+      // Object.assign(destination, source)
+      //   let cloneUser = {};
+      //   Object.assign(cloneUser, userDetails);
+      //   console.log(userDetails);
+      //   console.log(cloneUser);
+
+      //   userDetails.state = "Tamilnadu";
+      //   userDetails.age = 26;
+      //   cloneUser.isAdmin = true;
+      //   console.log(userDetails);
+      //   console.log(cloneUser);
+
+      // Merge
+      // Object.assign(designation, source-1, source-2,...source-N)
+
+      //   let cloneUser = {
+      //     firstName: "John",
+      //   };
+
+      //   let userAddress = {
+      //     city: "Chennai",
+      //     pincode: 600018,
+      //     state: "Tamilnadu",
+      //   };
+
+      //   let companyDetails = {
+      //     company: "CTS",
+      //     location: "Chennai",
+      //     designation: "Associate Software Engineer",
+      //   };
+
+      //   let hobbies = {
+      //     hobbyOne: "Cricket",
+      //     hobbyTwo: "Football",
+      //   };
+
+      //   Object.assign(cloneUser, userAddress, companyDetails, hobbies);
+      //   console.log(cloneUser);
+
+      //   let cloneUser = Object.assign(
+      //     {},
+      //     { firstName: "John", lastName: "Jack" },
+      //     { age: 23 },
+      //     { city: "Chennai" }
+      //   );
+      //   console.log(cloneUser);
+
+      //   let cloneUser = Object.assign(
+      //     {},
+      //     { firstName: "John", lastName: "Jack" },
+      //     { firstName: "Prince", age: 23 },
+      //     { city: "Chennai" }
+      //   );
+      //   console.log(cloneUser);
+
+      //   let userDetails = {
+      //     name: "John",
+      //     age: 23,
+      //     isAdmin: false,
+      //   };
+      //   //   console.log(userDetails);
+      //   let cloneUser = {};
+
+      //   for (const userDetail in userDetails) {
+      //     // userDetail = "isAdmin"
+      //     // console.log(userDetails[userDetail]);
+      //     cloneUser[userDetail] = userDetails[userDetail];
+      //     // cloneUser["isAdmin"] = userDetails["isAdmin"] // false
+      //   }
+      //   //   console.log(cloneUser);
+
+      //   userDetails.city = "Chennai";
+      //   cloneUser.state = "Tamilnadu";
+
+      //   console.log(userDetails);
+      //   console.log(cloneUser);
+
+      let userDetails = {
+        name: {
+          firstName: "John",
+          lastName: "Jack",
+        },
+        age: 23,
+        address: {
+          doorNo: 23,
+          street: "XYZ street",
+          pincode: 600018,
+          state: {
+            stateCode: 65,
+            stateName: "Tamilnadu",
+          },
+        },
+      };
+
+      let cloneUser = {};
+      //   cloneUser = structuredClone(userDetails);
+      //   console.log(userDetails);
+      //   console.log(cloneUser);
+
+      // Copy using string
+      cloneUser = JSON.stringify(userDetails);
+      console.log(cloneUser);
+      console.log(JSON.parse(cloneUser));
+    </script>
+  </body>
+</html>
