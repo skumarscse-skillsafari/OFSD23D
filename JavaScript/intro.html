@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Intro" />
+    <title>JavaScript - Intro</title>
+  </head>
+  <body>
+    <h2>JavaScript - Intro</h2>
+    <script>
+      /*
+        1. Introduction
+        2. Datatypes - 1. Primitive - String, Number, Boolean, BigInt, Undefined, Null, Symbol
+                       2. Non-Primitive - Objects, Arrays, Functions
+        Strings
+        1. Double quotes - Ex: "SkillSafari"
+        2. Single quotes - Ex: 'SkillSafari'
+        3. Backtick - Ex: `SkillSafari`
+        //   name = "John";
+        //   age = 20;
+        //   // John is 20 years old
+        //   console.log(name + " is " + age + " years old");
+        //   console.log(`${name} is ${age + 5} years old`);
+
+        // Numbers
+        // 0-9
+        // Decimal 
+        // Positive/Negative
+
+        // Boolean
+        // True or False
+
+        // Object
+        // Syntax
+        // let varName = {
+            key : "value"
+        }
+        */
+      //   let userDetails = {
+      //     name: "John",
+      //     age: 20,
+      //   };
+      //   console.log(userDetails.name);
+      //   console.log(userDetails.age);
+
+      //   userDetails.age = 35;
+      //   console.log(userDetails.age);
+
+      //   userDetails.isAdmin = true;
+      //   console.log(userDetails.isAdmin);
+
+      //   delete userDetails.age;
+      //   console.log(userDetails.age);
+
+      //   console.log(userDetails["name"]);
+
+      //   console.log("age" in userDetails);
+
+      //   for (let prop in userDetails) {
+      //     // console.log(prop + " => " + userDetails[prop]); // "name", "age", "isAdmin"
+      //     console.log(`${prop} => ${userDetails[prop]}`); // "name", "age", "isAdmin"
+      //   }
+      //   userDetails.address = {
+      //     street: "xyz street",
+      //     pincode: 600018,
+      //     city: "Chennai",
+      //   };
+      //   console.log(userDetails);
+      //   console.log(userDetails.address.pincode);
+
+      // Operators - Operator precedence
+      // BODMAS - Bracket Of - Division - Multiplication - Addition - Subtraction
+      // 2 + (3 * 4) / 5 * 6
+      // 2 + 12 / 5 * 6
+      // 2 + 2.4 * 6
+      // 2 + 14.4
+      // 16.4
+
+      // 1. Arithmetic - +, -, *, /, %, **
+      // 2. Assignment - =
+      // 3. Comparision - <, >, <=, >=, !=, ==, ===, !==
+      // 4. Increment/Decrement - ++, -- / pre, post
+      // 5. Conditional - ?: (3 > 2) ? console.log("True") : console.log("False")
+      // 6. Nullish Coalesing - ?? - Check the variable is defined with value or not
+      //   let user = "John";
+      // operand-1 ?? operand-2
+      // First operend-1 defined, return operand-1 value
+      // First operend-2 not-defined, return operend-2 value
+      //   alert(user ?? "Anonymous");
+      // 7. Logical - AND, OR, NOT
+      // AND
+      // Check for first falsy value, and return its actual value
+      // None of the operand turns false, return last operand actual value
+      // false - 0 - null - undefined - ""
+      //   console.log(true && 10 > 5 && "Hello" && 123 && "" && "World");
+      //   console.log(true && 10 > 5 && "Hello" && 123 && 1 && "World");
+      // Short-circuiting
+      // operand-1 false, return its actual value else return operand-2
+      //   console.log(10 < 1 && "Hello");
+      //   console.log(10 > 1 && "Hello");
+
+      // OR
+      // Check for first truthy value, and return its actual value
+      // None of the operand turns true, return last operand actual value
+      //   console.log(0 || false || undefined || "Hello" || null);
+      //   console.log(0 || false || undefined || "" || null);
+
+      // Short-Circuiting
+      // operand-1 true, return its actual value else return operand-2
+      //   console.log(12 || 0);
+      //   console.log(0 || 12);
+
+      //   let name = "John";
+      //   console.log(name || "Anonymous");
+      //   console.log(name ?? "Anonymous");
+
+      //   let age = 0;
+      //   console.log(age || "Not valid");
+      //   console.log(age ?? "Not valid");
+    </script>
+  </body>
+</html>
