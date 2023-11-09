@@ -288,6 +288,219 @@
       //   console.log(init);
       //   init++;
       // }
+
+      // Strings
+      // length
+      // Access
+      // Case-Change
+      // indexOf
+      // includes, startsWith, endsWith
+      // slice
+      // substring
+      // substr
+
+      // Functions
+      // Function Declaration
+      // Function Expression
+      // Arrow Function
+      // IIFE
+
+      // Syntax
+      // Function create
+      // function funcName(para-1, para-2,...para-N) {
+      //   // function block
+      // return
+      // }
+
+      // // Function calling
+      // funcName(arg-1, arg-2,...arg-N)
+
+      // function displayName(firstName, lastName) {
+      //   // console.log(firstName, lastName);
+      //   // let fullName = firstName + " " + lastName;
+      //   return `${firstName}, ${lastName}`;
+      // }
+      // // let result = displayName("John", "Jack");
+      // // console.log(result);
+      // console.log(displayName("John", "Jack"));
+
+      // Function Expression
+      // Syntax
+      // const varName = function (para-1, par-2, ...para-N) {
+      //   // function block
+      //   // return
+      // }
+      // varName(arg-1, arg-2,...arg-N)
+
+      // const displayName = function (firstName, lastName) {
+      //   return `${firstName}, ${lastName}`;
+      // };
+
+      // console.log(displayName("John", "Jack"));
+
+      // Arrow Function
+      // Syntax
+      // const varName = (para-1, para-2,..., para-N) => {
+      // function block
+      // return
+      // }
+      // varName(arg-1, arg-2,...arg-N)
+
+      // const displayName = (firstName, lastName) => {
+      //   return `${firstName}, ${lastName}`;
+      // };
+      // console.log(displayName("John", "Jack"));
+
+      // IIFE => Immediate Invocable Function Expression
+      // Syntax
+      // (function varName(para-1, para-2,..., para-N) {
+      // function block
+      // })(arg-1, arg-2,...arg-N)
+
+      // (function (firstName, lastName) {
+      //   console.log(firstName, lastName);
+      // })("John", "Jack");
+
+      // Outer variable and Local variable
+      // let age = 23;
+      // function displayName(firstName, lastName) {
+      //   // let message = `Fullname is: ${firstName}, ${lastName} and his age is: ${age}`;
+      //   let age = 35;
+      //   console.log(age);
+      //   // console.log(message);
+      // }
+      // displayName("John", "Jack");
+      // // console.log(message);
+      // console.log(age);
+
+      // Object
+      // Syntax
+      // let varName = {
+      //   key-1: value-1, // propertyName: propertyValue => property
+      //   key-2: value-2,
+      //   .
+      //   .
+      //   .
+      //   key-N: value-N
+      // }
+      // Syntax
+      // let varName = new Object()
+
+      // let userDetails = {
+      //   name: "John",
+      //   age: 23,
+      //   isAdmin: false,
+      //   city: "Chennai",
+      // };
+      // Access
+      // dot and square-bracket
+      // Syntax
+      // objName.propertyName
+      // objectName["propertyName"]
+      // console.log(userDetails.name);
+      // console.log(userDetails["city"]);
+
+      // Add
+      // Syntax
+      // objName.newPropertyName = propertyValue
+      // objName["newPropertyName"] = propertyValue
+      // userDetails.state = "Tamilnadu";
+      // userDetails["pincode"] = 641014;
+      // console.log(userDetails);
+
+      // Update
+      // objName.existingPropertyName = newPropertyValue
+      // objName["existingPropertyName"] = newPropertyValue
+      // userDetails.isAdmin = true;
+      // userDetails["city"] = "Coimbatore";
+      // console.log(userDetails);
+
+      // delete
+      // Syntax
+      // delete objName.propertyName
+      // delete objName["propertyName"]
+      // delete userDetails.age;
+      // delete userDetails["city"];
+      // console.log(userDetails);
+
+      // "in"
+      // Syntax
+      // "propertyName" in objectName
+      // console.log("age" in userDetails);
+      // console.log("state" in userDetails);
+
+      // Iterate
+      // Syntax
+      // for (let varName in objectName) {
+      // varName => key or propertyName
+      // objectName[varName] => value or propertyValue
+      // }
+      // for (let prop in userDetails) {
+      //   console.log(prop, userDetails[prop]); // "name", userDetails["name"]
+      // }
+
+      // function userDetails(name, age, isAdmin, city) {
+      //   return {
+      //     name,
+      //     age: age,
+      //     isAdmin,
+      //     city: city,
+      //     pincode: 600018,
+      //   };
+      // }
+      // console.log(userDetails("John", 23, true, "Chennai"));
+
+      // Object.assign(destination, [sources]) => Copy and Merging
+      // let name = { name: "John" };
+      // let age = { age: 23 };
+      // let city = { city: "Chennai" };
+      // let userDetails = {};
+      // Object.assign(userDetails, name, age, city, { pincode: 600018 });
+      // console.log(userDetails);
+      // userDetails.age = 32;
+      // console.log(userDetails);
+      // console.log(age);
+
+      // "this"
+      // let userDetails = {
+      //   name: "John",
+      //   age: 23,
+      //   isAdmin: false,
+      //   city: "Chennai",
+      //   displayDetails: function () {
+      //     console.log(userDetails.name);
+      //     console.log(this.age);
+      //     console.log(userDetails.isAdmin);
+      //     console.log(this.city);
+      //   },
+      // };
+      // console.log(userDetails);
+      // userDetails.displayDetails();
+
+      // Constructor
+      // Normal function
+      // function userDetails(name, age) {
+      //   return {
+      //     name: name,
+      //     age: age,
+      //     city: "Chennai",
+      //   };
+      // }
+      // console.log(userDetails("John", 23));
+
+      // Constructor
+      function UserDetails(name, age) {
+        // this = {}
+        this.name = name;
+        this.age = age;
+        this.city = "Chennai";
+      }
+      // Syntax
+      // new ConstructorName(arg-1, arg-2,..., arg-N)
+      let john = new UserDetails("John", 23);
+      console.log(john);
+      let jack = new UserDetails("Jack", 32);
+      console.log(jack);
     </script>
   </body>
 </html>
