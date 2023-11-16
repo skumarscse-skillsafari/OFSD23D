@@ -289,16 +289,6 @@
       //   init++;
       // }
 
-      // Strings
-      // length
-      // Access
-      // Case-Change
-      // indexOf
-      // includes, startsWith, endsWith
-      // slice
-      // substring
-      // substr
-
       // Functions
       // Function Declaration
       // Function Expression
@@ -489,18 +479,38 @@
       // console.log(userDetails("John", 23));
 
       // Constructor
-      function UserDetails(name, age) {
-        // this = {}
-        this.name = name;
-        this.age = age;
-        this.city = "Chennai";
-      }
+      // function UserDetails(name, age) {
+      //   // this = {}
+      //   this.name = name;
+      //   this.age = age;
+      //   this.city = "Chennai";
+      // }
       // Syntax
       // new ConstructorName(arg-1, arg-2,..., arg-N)
-      let john = new UserDetails("John", 23);
-      console.log(john);
-      let jack = new UserDetails("Jack", 32);
-      console.log(jack);
+      // let john = new UserDetails("John", 23);
+      // console.log(john);
+      // let jack = new UserDetails("Jack", 32);
+      // console.log(jack);
+
+      // Optional Chaining => ?.
+      // Objects
+      let userDetails = {
+        name: {
+          firstName: "John",
+          lastName: "Jack",
+        },
+        age: 23,
+        address: {
+          state: {
+            name: "Tamilnadu",
+            city: "Chennai",
+            pincode: 600018,
+          },
+        },
+      };
+      console.log(userDetails.address.state.pincode);
+      console.log(userDetails.address.street?.buildingNo);
+      console.log("Below userDetails Object");
     </script>
   </body>
 </html>
