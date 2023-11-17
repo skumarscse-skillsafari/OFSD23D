@@ -42,18 +42,78 @@
 
       // console.log(name.at(-2));
 
-      // let name = "John Jack"; // kcaJ nhoJ
+      // let name = "JOHN JACK"; // kcaJ nhoJ
       // let reversedStr = "";
       // for (let i = name.length - 1; i >= 0; i--) {
       //   // console.log(name[i]);
-      //   reversedStr = reversedStr + name[i]; // kcaJ nhoJ
+      //   if (
+      //     !(
+      //       (
+      //         name[i].toLowerCase() === "a" || // a === "a" => false
+      //         name[i].toLowerCase() === "e" || // k === "e" => false
+      //         name[i].toLowerCase() === "i" || // k === "i" => false
+      //         name[i].toLowerCase() === "o" || // k === "o" => false
+      //         name[i].toLowerCase() === "u"
+      //       ) // k === "u" => false
+      //     )
+      //   )
+      //     reversedStr = reversedStr + name[i]; // kcaJ nhoJ
       // }
       // console.log(reversedStr);
 
       // Case-Change - toUpperCase, toLowerCase
+      // let str = "john";
+      // let str = "JOHN";
+      // console.log(str.toUpperCase());
+      // console.log(str.toLowerCase());
+
       // Finding substr
-      // indexOf(substr, pos), lastIndexOf, replace(old, new), replaceAll(), str.repeat(count)
+      // substr => char or group of char in sequence order => alpha or alpha-numeric
+      // Ex: SkillSafari123
+      // substr => Skill, Safari, Sk, 123
+
+      // indexOf(substr, pos), lastIndexOf
+      let str = "SkillSafari123 EduKeys789";
+      // searchStr = "kill"
+      let searchStr = "a";
+      let startPos = 0;
+      // console.log(str.indexOf("a"));
+      // console.log(str.lastIndexOf("a"));
+      // negative index
+      // console.log(str.indexOf("8", -4));
+      // console.log(str.lastIndexOf("a"));
+      // indexOf()
+      // Syntax
+      // baseString.indexOf("substr", startPosition) => return positive number or -1
+      // console.log(str.indexOf("a", 7));
+      // for (let i = startPos; i < str.length; i++) { // i = 9; 9 < 25;
+      //   let foundPos = str.indexOf(searchStr, startPos); // -1
+      //   if (foundPos == -1) break;
+      //   console.log(
+      //     `Search String: ${searchStr}: found in the POS: ${foundPos}`
+      //   );
+      //   startPos = ++foundPos;
+      // }
+
+      // Strings are immutable => Cannot be changed
+      // let newStr = "Hello";
+      // newStr[1] = "a";
+      // console.log(newStr[1]);
+      // console.log(newStr);
+
+      // while (true) {
+      //   let foundPos = str.indexOf(searchStr, startPos); // -1
+      //   if (foundPos == -1) break;
+      //   console.log(
+      //     `Search String: ${searchStr}: found in the POS: ${foundPos}`
+      //   );
+      //   startPos = foundPos + 1;
+      // }
+
+      // John Jack => J#hn$J#ck (forward and reverse)
+
       // includes(substr, pos), startsWith(substr, pos), endsWith(substr, pos)
+      // replace(old, new), replaceAll(), str.repeat(count)
       // trim(), trimEnd, trimStart
       // Getting substr
       // slice(start, end) - positive and negative index
