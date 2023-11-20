@@ -73,10 +73,10 @@
       // substr => Skill, Safari, Sk, 123
 
       // indexOf(substr, pos), lastIndexOf
-      let str = "SkillSafari123 EduKeys789";
+      // let str = "SkillSafari123 EduKeys789";
       // searchStr = "kill"
-      let searchStr = "a";
-      let startPos = 0;
+      // let searchStr = "a";
+      // let startPos = 0;
       // console.log(str.indexOf("a"));
       // console.log(str.lastIndexOf("a"));
       // negative index
@@ -111,17 +111,124 @@
       // }
 
       // John Jack => J#hn$J#ck (forward and reverse)
+      // let originalStr = "John Jack";
+      // let newStr = "";
+      // let tempStr = "";
+      // console.log(originalStr);
+      // for (let i = 0; i < originalStr.length; i++) {
+      //   if (
+      //     originalStr[i] === "a" ||
+      //     originalStr[i] === "e" ||
+      //     originalStr[i] === "i" ||
+      //     originalStr[i] === "o" ||
+      //     originalStr[i] === "u"
+      //   ) {
+      //     tempStr = "#";
+      //     newStr = newStr + tempStr;
+      //   } else if (originalStr[i] === " ") {
+      //     tempStr = "$";
+      //     newStr = newStr + tempStr;
+      //   } else {
+      //     newStr = newStr + originalStr[i];
+      //   }
+      // }
+      // console.log(newStr);
+
+      // let originalStr = "John Jack"; // J#hn$J#ck
+      // let newStr = "";
+      // let tempStr = "";
+      // for (let i = 0; i < originalStr.length; i++) {
+      //   if (
+      //     originalStr[i] === "a" ||
+      //     originalStr[i] === "e" ||
+      //     originalStr[i] === "i" ||
+      //     originalStr[i] === "o" ||
+      //     originalStr[i] === "u"
+      //   ) {
+      //     tempStr = "#";
+      //     newStr = newStr + tempStr; // J#
+      //   } else if (originalStr[i] === " ") {
+      //     tempStr = "$";
+      //     newStr = newStr + tempStr; // J#hn$
+      //   } else {
+      //     newStr = newStr + originalStr[i]; // J#hn
+      //   }
+      // }
+      // console.log(newStr);
 
       // includes(substr, pos), startsWith(substr, pos), endsWith(substr, pos)
+      // str.includes(substr, pos) => return "true" if substring exists, else retutn "false"
+      // let baseString = "Hello, World";
+      // console.log(baseString.includes("llo")); // true
+      // console.log(baseString.includes("world")); // false
+      // console.log(baseString.includes("llo", 5)); // false
+
+      // str.startsWith(substr, pos)
+      // console.log(baseString.startsWith("Hello"));
+      // console.log(baseString.startsWith("ello"));
+
+      // str.endsWith(substr, pos)
+      // console.log(baseString.endsWith("World"));
+      // console.log(baseString.endsWith("Worl"));
+
       // replace(old, new), replaceAll(), str.repeat(count)
+      // str.replace(oldsubStr, newsubStr)
+      // console.log(baseString.replace("l", "#"));
+      // console.log(baseString.replaceAll("l", "#"));
+
+      // str.repeat(count)
+      // console.log(baseString.repeat(3));
+
       // trim(), trimEnd, trimStart
+      // let newStr = "               SkillSafari               ";
+      // console.log(newStr);
+      // console.log(newStr.trim());
+      // console.log(newStr.trimStart());
+      // console.log(newStr.trimEnd());
+
       // Getting substr
       // slice(start, end) - positive and negative index
+      // str.slice(start, end) => end => exculde
+      // console.log(baseString);
+      // console.log(baseString.slice(2, 5));
+      // console.log(baseString.slice(0, 5));
+      // console.log(baseString.slice(0, 5));
+      // console.log(baseString.slice(-5, 12));
+      // console.log(baseString.slice(-5));
+
       // substring(start, end) - forward and backward
+      // str.substring(start, end) => end => exculded
+      // negative index not allowed
+      // console.log(baseString);
+      // console.log(baseString.substring(0, 5));
+      // console.log(baseString.substring(0));
+      // console.log(baseString.substring(7));
+      // console.log(baseString.substring(5, 0));
+
       // substr(start, length)
+      // str.substr(start, length)
+      // console.log(baseString);
+      // console.log(baseString.substr(0, 6));
+      // console.log(baseString.substr(-8, 6));
+
       // comparison
+      // https://www.asciitable.com/
+      // console.log("A" > "a"); // 65 > 97
+      // console.log("Hello" > "World"); // H > W => 72 > 87
+      // console.log("Abc" > "Abcd"); //
+      // console.log("Abcd" > "Abc"); //
+      // console.log("Abcdf" > "Abcde"); // 102 > 101
+
       // str.codePointAt(index)
+      // console.log(baseString);
+      // // console.log(baseString.codePointAt(0)); // 72
+      // for (let i = 0; i < baseString.length; i++) {
+      //   console.log(`${baseString[i]} => ${baseString.codePointAt(i)}`);
+      // }
+
       // String.fromCodePoint(ascii)
+      // console.log(String.fromCodePoint(72));
+      // console.log(String.fromCodePoint(108));
     </script>
   </body>
 </html>
