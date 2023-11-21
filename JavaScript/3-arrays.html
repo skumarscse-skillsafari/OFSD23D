@@ -10,16 +10,172 @@
     <h2>Arrays</h2>
 
     <script>
+      // Array => Storing elements/values in sequence order starts with "0"
+      // Each and every element in the array can be accessed by "index"
       // Declaration
-      // Mix array
-      // Access, Update, Delete
-      // Iteration - for, for-of, for-in
+      // Square bracket and new Array()
+      // Syntax
+      // let varName = [element-1, element-2,..., element-N]
+      // Ex:
+      // let namesArr = ["John", "Jack", "Mary"];
+      // console.log(namesArr);
+
       // Length
+      // console.log(namesArr.length);
+
+      // Mix array
+      // let mixArr = [
+      //   "John", // String => 0
+      //   123, // Number => 1
+      //   true, // Boolean => 2
+      //   { name: "Jack" }, // Object => 3
+      //   function () {
+      //     console.log("Hello");
+      //   }, // Function => 4
+      //   [1, 2, 3], // Array => 5
+      // ];
+      // console.log(mixArr);
+      // // Access, Update, Delete
+      // // Access
+      // // Syntax
+      // // arrName[index]
+      // console.log(mixArr[0]);
+
+      // Update
+      // Syntax
+      // arrName[index] = newValue
+      // console.log(namesArr);
+      // namesArr[1] = "Prince";
+      // console.log(namesArr);
+
+      // namesArr[namesArr.length] = "Robert";
+      // console.log(namesArr);
+
+      // Find last element
+      // console.log(namesArr[namesArr.length - 1]);
+      // console.log(namesArr.at(-1));
+
+      // delete
+      // Syntax
+      // delete arrName[index]
+      // console.log(namesArr);
+      // delete namesArr[1];
+      // console.log(namesArr);
+
+      // Iteration - for, for-of, for-in
+      // for (let i = 0; i < namesArr.length; i++) {
+      //   console.log(namesArr[i]);
+      // }
+
+      // for (const name of namesArr) {
+      //   console.log(name);
+      // }
+
+      // for (const char of "Hello World") {
+      //   console.log(char);
+      // }
+
+      // for (const name in namesArr) {
+      //   console.log(namesArr[name]);
+      // }
+
+      let studentsArr = [
+        { id: 10001, name: "john", age: 23 },
+        { id: 10002, name: "Jack", age: 20 },
+        { id: 10003, name: "Mary", age: 18 },
+        { id: 10004, name: "Robert", age: 20 },
+        { id: 10005, name: "Prince", age: 25 },
+      ];
+      // console.log(studentsArr[2]);
+      // id = 10004
+      // let newArr = [];
+      // for (const student of studentsArr) {
+      //   if (student.age === 20) {
+      //     newArr.push(student);
+      //   }
+      // }
+      // console.log(newArr);
+      let studentNameStartswithJ = [];
+      for (const student of studentsArr) {
+        if (student.name.toLowerCase().startsWith("j")) {
+          studentNameStartswithJ.push(student);
+        }
+      }
+      console.log(studentNameStartswithJ);
+
+      // for (let i = 0; i < studentsArr.length; i++) {
+      //   if (studentsArr[i].id === 10004) {
+      //     // { id: 10004, name: "Robert", age: 20 }
+      //     console.log(studentsArr[i]);
+      //   }
+      // }
+
+      // for (const student of studentsArr) {
+      //   // { id: 10004, name: "Robert", age: 20 }
+      //   if (student.id === 10004) {
+      //     console.log(student);
+      //   }
+      // }
+
       // pop()/push()
+      // Remove and Add elements
+      // pop() => remove elements from end
+      // push() => add element(s) at end
+      let namesArr = ["John", "Jack", "Mary", "Robert"];
+      // console.log(namesArr);
+      // namesArr.pop();
+      // namesArr.pop();
+      // console.log(namesArr);
+
+      // push()
+      // arr.push(ele-1, ele-2,..., ele-N)
+      // console.log(namesArr.push("Robert", "Mary", "Prince"));
+      // console.log(namesArr);
+
       // shift()/unshift()
+      // remove / add element(s) in the beginning of array
+      // console.log(namesArr);
+      // namesArr.shift();
+      // namesArr.shift();
+      // console.log(namesArr);
+
+      // console.log(namesArr.unshift("Jack", "John"));
+      // console.log(namesArr);
+
       // Multi-dimensional array
+      // let multiDArr = [
+      //   [1, 2, 3], // [0]
+      //   [4, 5, 6], // [1]
+      //   [7, [7, 9, 10], 11], // [2]
+      // ];
+      // console.log(multiDArr);
+      // console.log(multiDArr[0][1]);
+      // console.log(multiDArr[1][1]);
+      // console.log(multiDArr[2][1][2]);
+
       // Array methods
       // arr.splice(start, deleteCount, elements) - insert, remove, replace, negative index
+      // remove
+      // Syntax
+      // arr.splice(startIndex, deleteCount)
+      // let numArr = [1, 2, 3, 4, 5, 6];
+      // console.log(numArr);
+      // console.log(numArr.splice(0, 2)); // [3, 4]
+      // console.log(numArr.splice(2, 2)); // [3, 4]
+      // console.log(numArr.splice(-3, 2)); // [4, 5]
+      // console.log(numArr); // [1, 2, 3, 6]
+
+      // replace
+      // Syntax
+      // arr.splice(startIndex, deleteCount, element(s))
+      // console.log(numArr);
+      // console.log(numArr.splice(2, 2, 7, 8, 9, 10));
+      // console.log(numArr);
+
+      // console.log(numArr);
+      // numArr.splice(2, 0, 7, 8, 9, 10);
+      // console.log(numArr);
+
       // arr.slice(start, end) - positive and negative
       // arr.concat()
       // Iterate - forEach()

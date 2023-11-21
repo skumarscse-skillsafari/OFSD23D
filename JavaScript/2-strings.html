@@ -229,6 +229,25 @@
       // String.fromCodePoint(ascii)
       // console.log(String.fromCodePoint(72));
       // console.log(String.fromCodePoint(108));
+
+      let sentence = "Some sunsets hello world simply stun.";
+      let startWord = "h";
+      let wordStartIndex = 0;
+      let sWords = "";
+
+      for (let i = 0; i <= sentence.length; i++) {
+        // 37
+        if (i === sentence.length || sentence[i] === " ") {
+          // 5 === 37 || "s" === " "
+          let word = sentence.substring(wordStartIndex, i); // 0, 4 => Some
+          if (word[0].toLowerCase() === startWord.toLowerCase()) {
+            // "s" === "s"
+            sWords += word + " "; // sWords = sWords + word + " " => Some
+          }
+          wordStartIndex = i + 1; // 5
+        }
+      }
+      console.log(`Words starting with '${startWord}' : ${sWords}`);
     </script>
   </body>
 </html>
