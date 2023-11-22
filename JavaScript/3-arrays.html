@@ -79,13 +79,13 @@
       //   console.log(namesArr[name]);
       // }
 
-      let studentsArr = [
-        { id: 10001, name: "john", age: 23 },
-        { id: 10002, name: "Jack", age: 20 },
-        { id: 10003, name: "Mary", age: 18 },
-        { id: 10004, name: "Robert", age: 20 },
-        { id: 10005, name: "Prince", age: 25 },
-      ];
+      // let studentsArr = [
+      //   { id: 10001, name: "john", age: 23 },
+      //   { id: 10002, name: "Jack", age: 20 },
+      //   { id: 10003, name: "Mary", age: 18 },
+      //   { id: 10004, name: "Robert", age: 20 },
+      //   { id: 10005, name: "Prince", age: 25 },
+      // ];
       // console.log(studentsArr[2]);
       // id = 10004
       // let newArr = [];
@@ -95,13 +95,13 @@
       //   }
       // }
       // console.log(newArr);
-      let studentNameStartswithJ = [];
-      for (const student of studentsArr) {
-        if (student.name.toLowerCase().startsWith("j")) {
-          studentNameStartswithJ.push(student);
-        }
-      }
-      console.log(studentNameStartswithJ);
+      // let studentNameStartswithJ = [];
+      // for (const student of studentsArr) {
+      //   if (student.name.toLowerCase().startsWith("j")) {
+      //     studentNameStartswithJ.push(student);
+      //   }
+      // }
+      // console.log(studentNameStartswithJ);
 
       // for (let i = 0; i < studentsArr.length; i++) {
       //   if (studentsArr[i].id === 10004) {
@@ -121,7 +121,7 @@
       // Remove and Add elements
       // pop() => remove elements from end
       // push() => add element(s) at end
-      let namesArr = ["John", "Jack", "Mary", "Robert"];
+      // let namesArr = ["John", "Jack", "Mary", "Robert"];
       // console.log(namesArr);
       // namesArr.pop();
       // namesArr.pop();
@@ -177,8 +177,67 @@
       // console.log(numArr);
 
       // arr.slice(start, end) - positive and negative
+      // slice() =>
+      // let names = ["John", "Jack", "Mary", "Robert", "Prince"];
+      // console.log(names);
+      // console.log(names.slice(1, 4));
+      // let newArr = names.slice(1, 4);
+      // newArr.push("Raaj");
+      // console.log(newArr);
+      // console.log(names);
+      // let newArr = names.slice();
+      // newArr.push("Raaj");
+      // console.log(newArr);
+      // console.log(names);
+
+      // let newArr = names;
+      // newArr.push("Raaj");
+      // console.log(newArr);
+      // console.log(names);
+
       // arr.concat()
+      // let arrOne = [1, 2, 3];
+      // let arrTwo = [4, 5, 6];
+      // let arrThree = [7, 8, 9];
+      // let newArr = arrOne.concat(arrTwo, arrThree);
+      // let newArr = [arrOne, arrTwo, arrThree];
+      // console.log(newArr);
+
       // Iterate - forEach()
+      /*
+        Syntax
+        arr.forEach(function (element, index, array) {
+            // callback function block
+        })
+      */
+      // let names = ["John", "Jack", "Mary", "Robert", "Prince"];
+      // for (const name of names) {
+      //   console.log(name);
+      // }
+
+      // for (let i = 0; i < names.length; i++) {
+      //   console.log(`Index: ${i} => Element: ${names[i]} => ${names}`);
+      // }
+
+      // names.forEach(function (e, i, a) {
+      //   console.log(`Index: ${i} => Element: ${e} => ${a}`);
+      // });
+
+      // names.forEach((e) => console.log(`Element: ${e}`));
+
+      let studentsArr = [
+        { id: 10001, name: "John", age: 23, college: "SkillSafari" },
+        { id: 10002, name: "Jack", age: 20, college: "EduKeys" },
+        { id: 10003, name: "Mary", age: 18, college: "SkillSafari" },
+        { id: 10004, name: "Robert", age: 20, college: "EduKeys" },
+        { id: 10005, name: "Prince", age: 25, college: "SkillSafari" },
+      ];
+      let newArr = [];
+      studentsArr.forEach(function (student) {
+        newArr.push({ id: student.id, name: student.name });
+      });
+      console.log(newArr);
+
       // Searching - indexOf(), lastIndexOf(), includes()
       // find(), findIndex(), findLastIndex()
       // filter()
