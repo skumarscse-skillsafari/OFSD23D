@@ -232,15 +232,118 @@
         { id: 10004, name: "Robert", age: 20, college: "EduKeys" },
         { id: 10005, name: "Prince", age: 25, college: "SkillSafari" },
       ];
-      let newArr = [];
-      studentsArr.forEach(function (student) {
-        newArr.push({ id: student.id, name: student.name });
-      });
-      console.log(newArr);
+      // let newArr = [];
+      // studentsArr.forEach(function (student) {
+      //   newArr.push({ id: student.id, name: student.name });
+      // });
+      // console.log(newArr);
 
       // Searching - indexOf(), lastIndexOf(), includes()
+      // let usernames = ["John", "Jack", "Mary", "Robert", "Prince", "Mary"];
+      // Syntax
+      // arr.indexOf(searchEle, startIndex) // return "index", if element found
+      // Element not found, return "-1"
+      // console.log(usernames.indexOf("Jack")); // 1
+      // console.log(usernames.indexOf("Mary", 3)); // 5
+      // console.log(usernames.lastIndexOf("Mary")); // 5
+      // console.log(usernames.indexOf("Raaj")); // -1
+
+      // arr.includes(searchEle, startIndex) => true/false
+      // console.log(usernames.includes("Prince")); // true
+      // console.log(usernames.includes("John", 2)); // false
+      // console.log(usernames.includes("Raaj", 2)); // false
+
       // find(), findIndex(), findLastIndex()
+      /*
+      arr.find(function(element, index, arr) {
+        // find logic
+      })
+      */
+      // let searchEle = prompt("Enter username");
+      // let user = usernames.find(function (element) {
+      //   return element.toLowerCase() === searchEle.toLowerCase();
+      // });
+      // let user = usernames.find(
+      //   (element) => element.toLowerCase() === searchEle.toLowerCase()
+      // );
+      // console.log(
+      //   user
+      //     ? `User enetered name ${user} is present in usernames array`
+      //     : `User enetered name ${searchEle} is not present in usernames array`
+      // );
+
+      // findIndex()
+      /*
+      arr.findIndex(function (element, index, array) {
+        // logic
+      })
+      */
+      // console.log(
+      //   usernames.findIndex(function (user) {
+      //     return user === "Mary";
+      //   })
+      // );
+
+      // console.log(
+      //   usernames.findLastIndex(function (user) {
+      //     return user === "Mary";
+      //   })
+      // );
+
       // filter()
+      /*
+        arr.filter(function (element, index, array) {
+          // logic
+        })
+      */
+      // let filteredUsers = usernames.filter(function (element) {
+      //   return element === "Raaj";
+      // });
+
+      // console.log(filteredUsers);
+
+      // Filter student's age <= 20
+      // let filteredArr = [];
+      // for (let i = 0; i < studentsArr.length; i++) {
+      //   if (studentsArr[i].age <= 20) {
+      //     filteredArr.push(studentsArr[i]);
+      //   }
+      // }
+      // console.log(filteredArr);
+
+      // let filteredArr = studentsArr.filter((student) => student.age <= 20);
+      // console.log(filteredArr);
+
+      // Filter student name with "o" character
+      // let filteredArr = studentsArr.filter((student) =>
+      //   student.name.includes("o")
+      // );
+      // console.log(filteredArr);
+
+      // Find student with id = 10004
+      // let findStudent = studentsArr.find((student) => student.id === 10004);
+      // console.log(findStudent);
+
+      console.log(studentsArr);
+
+      // let filterByAge = studentsArr.filter((student) => student.age <= 20);
+      // console.log(filterByAge);
+      // let filterByCollege = filterByAge.find(
+      //   (student) => student.college === "SkillSafari"
+      // );
+      // console.log(filterByCollege);
+
+      let findByCollege = studentsArr
+        .filter((student) => student.age <= 20)
+        .find((student) => student.college === "SkillSafari");
+
+      console.log(findByCollege);
+      let newArr = [];
+      studentsArr.forEach((student, index) =>
+        newArr.push(Object.assign(student, { idNew: index + 1 }))
+      );
+      console.log(newArr);
+
       // Transform - map(), sort(), sort( (a, b) => a.localeCompare(b) ), reverse(), split and join
       // reduce(), some(), every()
     </script>
