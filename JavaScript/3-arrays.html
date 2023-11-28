@@ -324,7 +324,7 @@
       // let findStudent = studentsArr.find((student) => student.id === 10004);
       // console.log(findStudent);
 
-      console.log(studentsArr);
+      // console.log(studentsArr);
 
       // let filterByAge = studentsArr.filter((student) => student.age <= 20);
       // console.log(filterByAge);
@@ -333,19 +333,191 @@
       // );
       // console.log(filterByCollege);
 
-      let findByCollege = studentsArr
-        .filter((student) => student.age <= 20)
-        .find((student) => student.college === "SkillSafari");
+      // let findByCollege = studentsArr
+      //   .filter((student) => student.age <= 20)
+      //   .find((student) => student.college === "SkillSafari");
 
-      console.log(findByCollege);
-      let newArr = [];
-      studentsArr.forEach((student, index) =>
-        newArr.push(Object.assign(student, { idNew: index + 1 }))
-      );
-      console.log(newArr);
+      // console.log(findByCollege);
+      // let newArr = [];
+      // studentsArr.forEach((student, index) =>
+      //   newArr.push(Object.assign(student, { idNew: index + 1 }))
+      // );
+      // console.log(newArr);
 
       // Transform - map(), sort(), sort( (a, b) => a.localeCompare(b) ), reverse(), split and join
+      // map()
+      // Syntax
+      /*
+        arr.map(function (element, index, array) {
+          // transform logic
+        })
+        // return array of elements
+        // input => length of array
+        // output => length of array
+      */
+
+      // let names = ["John", "Jack", "Mary", "Robert", "Prince"];
+      // console.log(names);
+
+      // let namesAge = [];
+      // names.forEach((name) => {
+      //   namesAge.push(name.length);
+      // });
+      // console.log(namesAge);
+
+      // let nameCapitalize = [];
+      // names.forEach((name) => {
+      //   nameCapitalize.push(name.toUpperCase());
+      // });
+
+      // console.log(nameCapitalize);
+
+      // let namesAge = names.map((name) => name.length);
+      // console.log(namesAge);
+
+      // let nameCapitalize = names.map((name) => {
+      //   return name.toUpperCase();
+      // });
+      // console.log(nameCapitalize);
+
+      // and idNew property and value as 1, 2,...
+      // let newArr = studentsArr.map((student, index) => {
+      //   // return Object.assign(student, { idNew: index + 1 });
+      //   return {
+      //     ...student,
+      //     idNew: index + 1,
+      //   };
+      // });
+      // console.log(newArr);
+
+      // let newStudentsArr = studentsArr.map((student) => {
+      //   if (student.college === "SkillSafari") {
+      //     return {
+      //       ...student,
+      //       isAdmin: true,
+      //     };
+      //   } else {
+      //     return {
+      //       ...student,
+      //       isAdmin: false,
+      //     };
+      //   }
+      // });
+      // console.log(newStudentsArr);
+
+      // let userInfo = {
+      //   name: "John",
+      //   age: 23,
+      // };
+      // let userAddress = {
+      //   street: "123 Street",
+      //   city: "Coimbatore",
+      //   pincode: 641014,
+      // };
+
+      // console.log(userInfo);
+      // console.log(userAddress);
+      // console.log(Object.assign(userInfo, userAddress));
+      // console.log({ ...userInfo, ...userAddress });
+
+      // sort()
+      // let num = [4, 1, 3, 9, 0, -1];
+      // console.log(num);
+      // console.log(num.sort((a, b) => b - a));
+      // console.log(num.sort((a, b) => a - b));
+
+      // let names = ["John", "Jack", "Mary", "Robert", "Prince"];
+      // console.log(names);
+      // let sortedNames = names.sort((a, b) => {
+      //   if (a > b) return 1;
+      //   if (a < b) return -1;
+      //   if (a == b) return 0;
+      // });
+      // console.log(sortedNames);
+
+      // let sortedNames = names.sort((a, b) => b.localeCompare(a));
+      // console.log(sortedNames);
+
+      // console.log(studentsArr);
+      // let sortByAge = studentsArr.sort((a, b) => b.age - a.age);
+      // console.log(sortByAge);
+
+      // let sortByCollege = studentsArr.sort((a, b) =>
+      //   // a.college.localeCompare(b.college)
+      //   b.college.localeCompare(a.college)
+      // );
+      // console.log(sortByCollege);
+
+      // let sortByCollege = studentsArr.sort((a, b) => {
+      //   if (a.college < b.college) return 1;
+      //   if (a.college > b.college) return -1;
+      //   if (a.college == b.college) return 0;
+      // });
+      // console.log(sortByCollege);
+
+      // reverse(), split and join
+      // let num = [5, 4, 3, 2, 1];
+      // let fruits = ["apple", "orange", "mango", "banana"];
+      // console.log(num.reverse());
+      // console.log(fruits.reverse());
+
+      // split() => string to array
+      // Syntax
+      // str.split("seperator")
+      // let fruits = "apple, orange, mango, banana";
+      // console.log(fruits);
+      // console.log(fruits.split(", "));
+
+      // let message = "Hello World";
+
+      // console.log(message.split(" "));
+      // console.log(message.split("o")); // ["Hell", " W", "rld"]
+      // console.log(message);
+      // console.log(message.split("").reverse().join(""));
+
+      // // join() => array to string
+      // // Syntax
+      // // arr.join("joiner")
+      // let namesArr = ["John", "Jack", "Mary", "Robert", "Prince"];
+      // console.log(namesArr);
+      // console.log(namesArr.join("-"));
+
       // reduce(), some(), every()
+      // Syntax
+      /*
+        arr.reduce(function (accumulator, element, array) {
+          // logic
+        }, initialValue)
+      */
+      // let num = [1, 2, 3, 4, 5]; // 15
+      // console.log(num);
+      // let result = num.reduce((acc, val) => {
+      //   // acc => 10 val => 5
+      //   return (acc = acc + val); // acc = 10 + 5 => 15
+      // }, 0);
+      // console.log(result);
+
+      // some()
+      // Syntax
+      /*
+        arr.some((element, index, arr) => {
+          // logic
+        })
+      */
+      // let collegeCheck = studentsArr.some(
+      //   (student) => student.college === "Google"
+      // );
+      // console.log(collegeCheck);
+
+      // console.log(studentsArr);
+
+      // let collegeCheck = studentsArr.every(
+      //   (student) => student.college === "SkillSafari"
+      // );
+      // console.log(collegeCheck);
+
+      // let ageCheck = studentsArr.every((student) => student.age <= 25);
+      // console.log(ageCheck);
     </script>
   </body>
 </html>
