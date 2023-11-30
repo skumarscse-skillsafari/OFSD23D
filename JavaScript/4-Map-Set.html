@@ -10,14 +10,161 @@
     <h2>Map and Set</h2>
 
     <script>
+      // Map => Map is a collection of keyed data items
+      // Object => key: value pair stored as unordered pattern
+      // Object => key => should be a string
+      // Object => key and value are non-iterable
+      // Map => key : value pair stored in sequentional order
+      // Map => key can be of any data type
+      // Map => key and value can be iterable as like array
+
+      // Object
+      // Insert, Add, Update  => "." or "[]"
+      // Map => inbuilt methods
       // Map and Set
       // Map
       // new Map(), set(), get(), has(), delete(), clear(), size
-      // key as objects
+
+      // Create => Looks similar like a multi-dimentional array
+      // new Map()
+      // let userDetails = new Map();
+      // console.log(userDetails);
+
+      // Add
+      // Syntax
+      // map.set(key, value)
+      // userDetails.set("fname", "John");
+      // userDetails.set("lname", "Jack");
+
       // set() in chaining
+      // userDetails.set("fname", "John").set("lname", "Jack").set("age", 23);
+
+      // let userDetails = new Map([
+      //   ["fname", "John"],
+      //   ["lname", "Jack"],
+      //   ["age", 23],
+      //   ["isAdmin", true],
+      // ]);
+      // console.log(userDetails);
+
+      // Access
+      // Syntax
+      // map.get("key") => value/undefined
+      // console.log(userDetails.get("age"));
+      // console.log(userDetails.get("city"));
+
+      // Existance check
+      // Syntax
+      // map.has("key") => boolen => true/false
+      // console.log(userDetails.has("lname"));
+      // console.log(userDetails.has("city"));
+
+      // delete
+      // Syntax
+      // map.delete("key") => removes the "key: value" matches the "key"
+      // userDetails.delete("lname");
+      // console.log(userDetails);
+
+      // clear() => removes all the elements from the Map
+      // Syntax
+      // userDetails.clear();
+      // console.log(userDetails);
+      // console.log(userDetails.size);
+
+      // key as objects
+      // let demo = {
+      //   city: "Chennai",
+      // };
+      // let user = new Map();
+      // user.set(demo, "This has info about a user");
+
+      // user.set(true, "True");
+      // console.log(user);
+
       // Iterations: keys(), values(), entries()
+
+      // let userDetails = new Map([
+      //   ["fname", "John"],
+      //   ["lname", "Jack"],
+      //   ["age", 23],
+      //   ["isAdmin", true],
+      // ]);
+      // console.log(userDetails);
+
+      // Iterate => keys() with for...of
+      // Syntax
+      // map.keys() => Iterable keys => for... of
+      // console.log(userDetails.keys());
+      // let keys = userDetails.keys(); // ["fname", "lname", "age", "isAdmin"]
+      // for (const key of keys) {
+      //   console.log(key);
+      // }
+
+      // Iterate values => map.values() => for...of
+      // console.log(userDetails.values());
+      // for (const value of userDetails.values()) {
+      //   console.log(value);
+      // }
+
+      // map.entries() => Iterable keys and values
+      // console.log(userDetails.entries());
+      // for (const [key, value] of userDetails.entries()) {
+      //   console.log(key + " => " + value);
+      // }
+
       // Object.entries() => Object to Map
+      // new Map(Object.entries(object))
+      // let productDetailsObject = {
+      //   id: 10001,
+      //   productName: "MI Tv",
+      //   price: 45000,
+      //   category: "Electronics",
+      //   isStockAvailable: true,
+      // };
+      // console.log(productDetailsObject);
+
+      // let productDetailsMap = new Map(Object.entries(productDetailsObject));
+      // console.log(productDetailsMap);
+
       // Object.fromEntries() => Map to Object
+      // Syntax
+      // Object.fromEntries(Map)
+      let studentsMarkMap = new Map([
+        ["English", 98],
+        ["Maths", 97],
+        ["Physics", 96],
+        ["Chemistry", 95],
+      ]);
+      // console.log(studentsMarkMap);
+
+      // let studentsMarkObject = Object.fromEntries(studentsMarkMap);
+      // console.log(studentsMarkObject["English"]);
+      // console.log(studentsMarkObject.Maths);
+
+      let user = {
+        name: "John",
+        age: 20,
+        isAdmin: false,
+      };
+      console.log(user);
+      // let user = { name: "John", age: 40, isAdmin: false }
+      // Convert => Object to Map => Object.entries()
+      // Iterate => double the user age
+      // Convert => Map to Object => Object.fromEntries()
+      let userMap = Object.entries(user);
+      console.log(userMap);
+
+      let updatedUserAge = Object.fromEntries(
+        userMap.map((user) => {
+          // console.log(user); // ['name', 'John']
+          if (user[0] === "age") {
+            return [user[0], user[1] * 2];
+          } else {
+            return user;
+          }
+        })
+      );
+      console.log(updatedUserAge);
 
       // Set
       // new Set(), add(), delete(), has(), clear(), size
