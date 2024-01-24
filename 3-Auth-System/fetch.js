@@ -49,3 +49,13 @@ fetch("https://fakestoreapi.com/products")
     container.innerHTML = productsEleArr.join(" ");
   })
   .catch((err) => console.log(err));
+
+let userCredentials = {
+  user: {
+    uid: "123",
+  },
+};
+let {
+  user: { uid },
+} = userCredentials;
+console.log(uid);

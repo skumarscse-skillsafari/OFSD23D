@@ -16,10 +16,28 @@ login.addEventListener("click", (e) => {
     signInWithEmailAndPassword(auth, email.value, password.value)
       .then((userCredential) => {
         // Signed in
-        const user = userCredential.user;
-        console.log(user);
+        /*
+        Destructuring
+        let userCredentials = {
+          user: {
+            uid:...
+          }
+        }
+        let {user : {uid}} = userCredentials;
+        let userInfo = {
+          name: "John",
+          age: 23
+        }
+       let {name, age} = userInfo
+        */
+        // const user = userCredential.user;
+        // console.log(user);
+        const {
+          user: { uid },
+        } = userCredential;
+        sessionStorage.setItem(uid, uid);
         alert("User logged in successfully");
-        window.location.href = `./profile.html?id=${user.uid}`;
+        window.location.href = `./profile.html?id=${uid}`;
       })
       .catch((error) => {
         const errorCode = error.code;

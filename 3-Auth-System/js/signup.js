@@ -2,6 +2,11 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
 } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+import {
+  getDatabase,
+  ref,
+  set,
+} from "https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
 const firstname = document.querySelector("#firstname");
 const lastname = document.querySelector("#lastname");
 const email = document.querySelector("#email");
@@ -24,8 +29,20 @@ register.addEventListener("click", (e) => {
       createUserWithEmailAndPassword(auth, email.value, password.value)
         .then((userCredential) => {
           // Signed up
-          const user = userCredential;
-          console.log(user);
+          // const user = userCredential;
+          // console.log(user);
+          const {
+            user: { uid },
+          } = userCredential;
+          const db = getDatabase();
+          set(ref(db, "usersData/" + uid), {
+            id: uid,
+            firstname: firstname.value,
+            lastname: lastname.value,
+            email: email.value,
+            password: password.value,
+            confirmPassword: confirmPassword.value,
+          });
         })
         .catch((error) => {
           const errorCode = error.code;
